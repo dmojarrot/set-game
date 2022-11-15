@@ -111,8 +111,8 @@ function App() {
 
   return (
     <div className="bg-slate-800 w-screen h-screen">
-      <div className="w-10/12 md:w-7/12 mx-auto">
-        <div className="grid grid-cols-3 pt-20 gap-5">
+      <div className="w-10/12 md:w-7/12 mx-auto pt-10">
+        <div className="grid grid-cols-3 gap-5">
           {data.slice(0, 12).map((item, index) => (
             <button
               key={index}
@@ -120,15 +120,15 @@ function App() {
               className="hover:bg-slate-700 disabled:bg-slate-700 rounded-md border border-slate-700"
               disabled={item.selected}
             >
-              <div className="flex gap-2 p-5 justify-center ">
+              <div className="flex gap-1 p-5 justify-center mx-2">
                 {[...Array(item.num)].map((_val, i) => (
                   <img
                     key={i}
                     className={`${item.color}`}
                     src={item.href.url}
                     alt="W3Schools.com"
-                    width={30}
-                    height={30}
+                    width={25}
+                    height={25}
                   />
                 ))}
               </div>
