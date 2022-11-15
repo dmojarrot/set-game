@@ -13,7 +13,7 @@ function App() {
     }
   }, [])
 
-  const selector = (item, index) => {
+  const selector = (item, index, setData) => {
     setData((prev) => {
       let newData = [...prev]
       newData[index].selected = true
